@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tryCalculator</title>
+</head>
+<body>
+    <h1>Caulator</h1>
+    <form class="formCaculator">
+        <input type="number", class="inputCaculator", id="input1">
+        <input type="number", class="inputCaculator", id="input2">
+        <p></p>
+        <div>
+            <button class="buttonCaculator1", style="background: azure">Addition(+)</button>
+            <button class="buttonCaculator2", style="background: azure">Subtraction(-)</button>
+            <button class="buttonCaculator3", style="background: azure">Multiplication(X)</button>
+            <button class="buttonCaculator4", style="background: azure">Division(/)</button>
+        </div>
+    </form>
+    <div>
+        <p>
+            <span class ="firstNumber"></span>
+            <span class="secondNumber"></span>
+            <span class="finalResult"></span>
+        </p>
+    </div>
+</body>
+<script>
+    let input1 = document.getElementById("input1");
+    let input2 = document.getElementById("input2");
+
+    let button1 = document.querySelector(".buttonCaculator1");
+    let button2 = document.querySelector(".buttonCaculator2");
+    let button3 = document.querySelector(".buttonCaculator3");
+    let button4 = document.querySelector(".buttonCaculator4");
+
+    let toShowFirst = document.querySelector(".firstNumber");
+    let toShowSecond = document.querySelector(".secondNumber");
+    let toShowFinal = document.querySelector(".finalResult");
+
+    function add(notDefault) {
+        notDefault.preventDefault();
+
+        let amount = input1.value;
+        let amount2 = input2.value;
+        let value = 0;
+
+        amount1 = parseInt(amount);
+        amount3 = parseInt(amount2);
+
+        value = amount1 + amount3;
+
+        toShowFirst.innerHTML = amount + " +";
+        toShowSecond.innerHTML = amount2 + " =";
+        toShowFinal.innerHTML = value;
+    };
+
+    function subs(notDefault) {
+        notDefault.preventDefault();
+
+        let amount = input1.value;
+        let amount2 = input2.value;
+        let value = 0;
+
+        value = amount1 - amount3;
+
+        toShowFirst.innerHTML = amount + " -";
+        toShowSecond.innerHTML = amount2 + " =";
+        toShowFinal.innerHTML = value;
+    };
+
+    function multi(notDefault) {
+        notDefault.preventDefault();
+
+        let amount = input1.value;
+        let amount2 = input2.value;
+        let value = 0;
+
+        amount1 = parseInt(amount);
+        amount3 = parseInt(amount2);
+
+        value = amount1 * amount3;
+
+        toShowFirst.innerHTML = amount + " *";
+        toShowSecond.innerHTML = amount2 + " =";
+        toShowFinal.innerHTML = value;
+    };
+
+    function divide(notDefault) {
+        notDefault.preventDefault();
+
+        let amount = input1.value;
+        let amount2 = input2.value;
+        let value = 0;
+
+        amount1 = parseInt(amount);
+        amount3 = parseInt(amount2);
+
+        value = amount1 / amount3;
+
+        toShowFirst.innerHTML = amount + " /";
+        toShowSecond.innerHTML = amount2 + " =";
+        toShowFinal.innerHTML = value;
+    };
+
+    button1.addEventListener('click', add);
+    button2.addEventListener('click', subs);
+    button3.addEventListener('click', multi);
+    button4.addEventListener('click', divide);
+
+
+</script>
+</html>
